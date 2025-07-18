@@ -1,0 +1,479 @@
+/* Basic Reset & Box-Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Example font */
+    color: #333; /* Dark text color */
+    line-height: 1.6;
+    background-color: #ffffff; /* Light background */
+}
+
+/* Typography */
+h1, h2 {
+    font-family: 'Poppins', sans-serif; /* Example font */
+    font-weight: 600;
+    color: #00252e; /* Dark blue for headings */
+}
+
+h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Buttons */
+.get-started-btn, .try-it-free-btn, .newsletter-form button {
+    display: inline-block;
+    padding: 0.8em 2em;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-btn {
+    background-color: #ff52bf; /* Pink */
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 2em;
+    margin-bottom: 8em;
+}
+
+.get-started-btn:hover {
+    background-color: #ff8fd1; /* Lighter pink on hover */
+}
+
+.try-it-free-btn {
+    background-color: #fff;
+    color: #ff52bf;
+    border: 1px solid #ff52bf;
+    padding: 0.5em 1.5em;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.try-it-free-btn:hover {
+    color: #ff8fd1;
+    border-color: #ff8fd1;
+}
+
+/* Header Section */
+.hero-section {
+    background-color: #ffffff; /* Light blue background */
+    padding: 1.5rem 1rem;
+    text-align: center;
+    padding-bottom: 5rem; /* Space for the image to overlap */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.navbar .logo {
+    width: 100px; /* Adjust as needed */
+}
+
+.hero-content {
+    margin-top: 8em;
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: -3rem; /* Adjust to make it overlap the section above */
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    background-color: #fff; /* White background */
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item img {
+    width: 35px; /* Adjust icon size */
+    margin-bottom: 0.5rem;
+}
+
+.stat-item h2 {
+    font-size: 3rem;
+    color: #00252e;
+    margin-bottom: 0.3rem;
+}
+
+.stat-item p {
+    color: #808d99; /* Grey text */
+}
+
+/* Feature Sections */
+.feature-section {
+    padding: 8rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.feature-section:nth-of-type(even){ /* Apply different background for alternating sections */
+    background-color: hsl(207, 100%, 98%);
+}
+
+.feature-section:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+.feature-section .feature-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.feature-section .feature-content h2 {
+    margin-bottom: 1rem;
+}
+
+.feature-section .feature-content p {
+    color: #00252e;
+}
+
+.feature-section img {
+    max-width: 100%;
+}
+
+
+.wave-divider {
+    width: 100%;
+    height: 100px; /* Adjust height based on your desired wave amplitude */
+    overflow: hidden; /* Important to clip parts of the wave outside the height */
+    margin-bottom: -5px; /* Slight negative margin to prevent tiny gaps */
+    background-color: #ffffff;
+}
+
+.wave-divider img{
+    
+    display: absolute;
+    left: 20em;
+    width: 100%;
+    height: 100%; /* Make SVG fill the wave-divider height */
+}
+
+.wave-divider1 {
+    display: none;
+}
+
+/* Ensure the call-to-action section is light colored */
+.call-to-action {
+    margin: 4em;
+    background-color: #ffffff; /* Make sure this is explicitly set to white or light */
+    position: relative; /* If you want to layer something over the wave, this helps */
+    text-align: center;
+}
+
+.call-to-action h2 {
+    margin-bottom: 2rem;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #00252e; /* Dark blue */
+    color: #fff;
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer-section h2 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.newsletter-signup {
+    margin-bottom: 2rem;
+}
+
+.newsletter-signup p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 0.8em 1em;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.newsletter-form button {
+    background-color: #ff52bf; /* Pink */
+    color: #fff;
+    padding: 0.8em 2em;
+    border-radius: 5px;
+    align-self: flex-end; /* Align to the right */
+    width: fit-content;
+}
+
+.newsletter-form button:hover {
+    background-color: #ff8fd1;
+}
+
+.contact-info .footer-logo {
+    width: 150px; /* Adjust logo size */
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.contact-info img{
+    filter: brightness(0) invert(1);
+
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.contact-item img {
+    width: 18px; /* Adjust icon size */
+    margin-top: .2rem;
+}
+
+.contact-item span {
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-icons a img {
+    width: 30px; /* Adjust icon size */
+    filter: invert(100%); /* Make icons white if they are dark */
+}
+
+/* Media Queries for larger screens (e.g., Tablet and Desktop) */
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 2rem 3rem 6rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        padding: 0 5rem;
+        font-size: 1.1rem;
+    }
+
+    .navbar .logo {
+        width: 150px;
+    }
+
+    .try-it-free-btn {
+        padding: 0.8em 2em;
+        font-size: 0.9rem;
+    }
+
+    .stats-section {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 4rem 3rem;
+    }
+
+    .feature-section {
+        flex-direction: row; /* Default for larger screens */
+        text-align: left;
+        padding: 5rem 3rem;
+        gap: 5rem;
+    }
+
+    .feature-section.flowing-conversations { /* Reverse order for specific sections */
+        flex-direction: row-reverse;
+    }
+
+    .feature-section .feature-content,
+    .feature-section .feature-image {
+        flex: 1;
+    }
+
+    .feature-section .feature-content h2 {
+        font-size: 2rem;
+    }
+
+    .feature-section .feature-image img {
+        max-width: 80%; /* Adjust image size */
+        margin: 0; /* Remove auto margin */
+    }
+
+    .call-to-action h2 {
+        font-size: 2rem;
+    }
+    .wave-divider {
+    display: none;
+        
+    }
+    .wave-divider1 {
+    
+    display: block;
+    width: 100%;
+    height: 100px; /* Adjust height based on your desired wave amplitude */
+    overflow: hidden; /* Important to clip parts of the wave outside the height */
+    margin-bottom: -5px; /* Slight negative margin to prevent tiny gaps */
+    background-color: #ffffff;
+}
+
+.wave-divider1 img{
+    
+    display: absolute;
+    left: 20em;
+    width: 100%;
+    height: 100%; /* Make SVG fill the wave-divider height */
+}
+
+
+/* And make sure your footer background is set correctly */
+.footer-section {
+    background-color: #00252e; /* Dark blue, matching SVG fill */
+    color: #fff;
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    position: relative; /* Helps with z-index if needed */
+    z-index: 2; /* Ensure footer is above the wave if they overlap */
+}
+
+    .footer-section {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 5rem 3rem;
+    }
+
+    .newsletter-signup {
+        flex: 1;
+        max-width: 40%; /* Adjust width */
+        margin-bottom: 0;
+    }
+
+    .contact-info {
+        flex: 1;
+        max-width: 40%; /* Adjust width */
+    }
+
+    .newsletter-form {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .newsletter-form input[type="email"] {
+        flex: 1;
+    }
+
+    .newsletter-form button {
+        align-self: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-section {
+        padding: 2rem 5rem 7rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        padding: 0 10rem;
+        font-size: 1.2rem;
+    }
+
+    .feature-section {
+        padding: 6rem 5rem;
+    }
+
+     .wave-divider {
+    display: none;
+        
+    }
+    .wave-divider1 {
+    
+    display: block;
+    width: 100%;
+    height: 100px; /* Adjust height based on your desired wave amplitude */
+    overflow: hidden; /* Important to clip parts of the wave outside the height */
+    margin-bottom: -5px; /* Slight negative margin to prevent tiny gaps */
+    background-color: #ffffff;
+}
+
+.wave-divider1 img{
+    
+    display: absolute;
+    left: 20em;
+    width: 100%;
+    height: 100%; /* Make SVG fill the wave-divider height */
+}
+
+    .footer-section {
+        padding: 6rem 5rem;
+        display: flex;
+        flex-direction: row;
+        
+    }
+}
